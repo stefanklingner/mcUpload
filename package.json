@@ -1,0 +1,17 @@
+{
+  "name": "mcUpload",
+  "version": "0.0.1",
+  "description": "upload server doing nothing",
+  "main": "server.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "stefan klingner",
+  "license": "BSD-2-Clause",
+  "dependencies": {
+    "express": "~4.10.2",
+    "multer": "~0.1.6",
+    "multiparty": "~4.0.0",
+    "busboy": "~0.2.9"
+  }
+}

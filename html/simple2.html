@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Simple2</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/upload.css" rel="stylesheet">
+
+</head>
+<body>
+
+<form id="uploadForm" action="/upload" method="post" enctype="multipart/form-data">
+    <input type="file" name="snapshot"/>
+</form>
+
+<button onclick="upload('uploadForm'); return 0;">Upload</button>
+
+<br/>
+<br/>
+
+<form id="uploadForm2" class="form-horizontal" encType="multipart/form-data" role="form">
+
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-lg-6">
+                    <label for="textInput" class="fll marTop5">File&nbsp;</label>
+
+                    <div class="input-group" id="inputGroup">
+                        <input id="textInput" type="text" class="form-control"
+                               name="textfeld">
+                        <span class="input-group-btn" type="button">
+                            <button class="btn btn-default">
+                                <span class="glyphicon glyphicon-folder-open"></span>
+                            </button>
+                        </span>
+                        <input type="file" id="fileInput"
+                               name="theFile" class="hideInput">
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</form>
+
+<button onclick="upload('uploadForm2'); return 0;">Upload</button>
+
+<script type="text/javascript">
+
+    //upload funtion
+    function upload(form) {
+
+        // get form data for POSTing
+        var elem = document.getElementById(form);
+        var vFD = new FormData(elem);
+
+        // create XMLHttpRequest object, adding few event listeners, and POSTing our data
+        var oXHR = new XMLHttpRequest();
+        oXHR.open('POST', 'http://localhost:8080/upload');
+        oXHR.send(vFD);
+    }
+
+</script>
+
+</body>
+</html>
