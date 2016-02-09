@@ -20,7 +20,7 @@ Server:
 * Copy and paste.
 
 Usage:
-* Start server.js on console with "node server.js"
+* Start app.js on console with "node app.js"
 * Browser: http://localhost:8080/ for nicer looking select boxes and one progress bar per file 
 * or http://localhost:8080/dnd for Drag and Drop
 * see the server log on console if files where uploded

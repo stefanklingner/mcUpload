@@ -5,7 +5,7 @@
       <option name="frameworkVersion" value="3.2.0" />
     </properties>
     <CLASSES>
-      <root url="file://$PROJECT_DIR$/js/knockout-3.2.0.js" />
+      <root url="file://$PROJECT_DIR$/public/js/lib/knockout-3.2.0.js" />
     </CLASSES>
     <SOURCES />
   </library>

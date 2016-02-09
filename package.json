@@ -2,16 +2,21 @@
   "name": "mcUpload",
   "version": "0.0.1",
   "description": "upload server doing nothing",
-  "main": "server.js",
+  "main": "app.js",
   "scripts": {
     "test": "test"
   },
   "author": "stefan klingner",
   "license": "BSD-2-Clause",
   "dependencies": {
+    "body-parser": "^1.14.2",
+    "busboy": "~0.2.9",
+    "cookie-parser": "^1.4.1",
+    "debug": "^2.2.0",
+    "ejs": "^2.4.1",
     "express": "~4.10.2",
+    "morgan": "^1.6.1",
     "multer": "~0.1.6",
-    "multiparty": "~4.0.0",
-    "busboy": "~0.2.9"
+    "multiparty": "~4.0.0"
   }
 }
