@@ -37,7 +37,7 @@ function uploadFile(file)
     xhr.addEventListener("load", handleComplete);
     xhr.addEventListener("error", handleError);
 
-    xhr.open('POST', 'http://localhost:8080/' + 'upload');    // Angeben der URL und des Requesttyps
+    xhr.open('POST', 'http://localhost:3002/' + 'upload');    // Angeben der URL und des Requesttyps
 
     var formdata = new FormData();    // Anlegen eines FormData Objekts zum Versenden unserer Datei
     formdata.append('uploadfile', file);  // Anhängen der Datei an das Objekt

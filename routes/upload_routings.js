@@ -25,12 +25,14 @@ router.get(home + 'simple', function (req, res) {
 
 //
 router.get(home + 'simple2', function (req, res) {
-    res.sendFile(__dirname + html_dir + 'simple2.html');
+    //res.sendFile(__dirname + html_dir + 'simple2.html');
+    res.sendFile(path.join(__dirname, '../public/html', 'simple2.html'));
 })
 
 //
 router.get(home + 'dnd', function(req, res) {
-    res.sendFile('/html/drag_and_drop.html');
+    //res.sendFile('/html/drag_and_drop.html');
+    res.sendFile(path.join(__dirname, '../public/html', 'drag_and_drop.html'));
 })
 
 //
