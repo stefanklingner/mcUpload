@@ -2,6 +2,8 @@
 //taken from:
 //http://www.script-tutorials.com/pure-html5-file-upload/
 
+"use strict";
+
 function Upload(elem) {
 
     var self = this;
@@ -113,7 +115,7 @@ function Upload(elem) {
 
         // set inner timer
         oTimer = setInterval(doInnerUpdates, 300);
-    }
+    };
 
     doInnerUpdates = function () { // display the upload speed
         var iCB = iBytesUploaded;
@@ -138,7 +140,7 @@ function Upload(elem) {
 
         self.elem.speed(iSpeed);
         self.elem.remaining(secondsToTime(secondsRemaining));
-    }
+    };
 
     uploadProgress = function (e) { // upload process in progress
         if (e.lengthComputable) {
@@ -156,7 +158,7 @@ function Upload(elem) {
         } else {
             console.log("unable to compute");
         }
-    }
+    };
 
     uploadFinish = function (e) { // upload successfully finished
 
@@ -164,16 +166,16 @@ function Upload(elem) {
         self.elem.processed(100);
 
         clearInterval(oTimer);
-    }
+    };
 
     uploadError = function (e) { // upload error
         console.log("upload error");
         clearInterval(oTimer);
-    }
+    };
 
     uploadAbort = function (e) { // upload abort
         console.log("upload abort");
         clearInterval(oTimer);
-    }
+    };
 
 }
