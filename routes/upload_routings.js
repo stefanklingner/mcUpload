@@ -42,9 +42,11 @@ router.post(home + 'upload', function (req, res) {
     busboy.on('file', function (fieldname, file, filename, encoding, mimetype) {
 
         console.log('File [' + fieldname + ']: filename: ' + filename);
+
         file.on('data', function(data) {
             //console.log('File [' + fieldname + '] got ' + data.length + ' bytes');
         });
+
         file.on('end', function() {
             console.log('File [' + fieldname + '] Finished');
         });
