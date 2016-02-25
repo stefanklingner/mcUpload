@@ -29,11 +29,16 @@ function picture_facade () {
 
             files.forEach(function (elem) {
 
-                fs.readFile(elem, function(err, data) {
-                    if (err) throw err;
-                    callback(data);
+                var filename = path + elem;
+
+                fs.readFile(filename, function(err, data) {
+
+                    callback(err, data);
+
                 });
+
             });
+
         });
 
     };

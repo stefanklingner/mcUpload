@@ -39,9 +39,24 @@ describe('picture_facade', function() {
 
     describe('#load_pictures', function () {
 
-        it('should be five pictures', function () {
+        it('should load pictures with length > 0', function (done) {
             var pf = new picture_facade();
-            assert.equal(2, pf.add(1,1));
+
+            var count = 0;
+            pf.load("./test/test_files/", function(err, data) {
+
+                if (err) throw err;
+
+                if (data != null) {
+                    count++;
+                    assert.isTrue(data.length > 0);
+                    assert.isTrue(count > 0, "count <= 0" );
+                }
+
+            });
+
+            done();
+
         });
 
     });
