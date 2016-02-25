@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="6373c17b-a165-4ed3-b124-f32a3a148be2" name="Default" comment="add test files">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/pictures.js" afterPath="$PROJECT_DIR$/public/js/pictures.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/upload_test.js" afterPath="$PROJECT_DIR$/test/upload_test.js" />
     </list>
     <ignored path="mcUpload.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -531,7 +529,19 @@
       <option name="project" value="LOCAL" />
       <updated>1456410922636</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="rename">
+      <created>1456416192405</created>
+      <option name="number" value="00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1456416192405</updated>
+    </task>
+    <task id="LOCAL-00007" summary="add tests">
+      <created>1456416218635</created>
+      <option name="number" value="00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1456416218635</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -617,7 +627,9 @@
     <MESSAGE value="express standard structure" />
     <MESSAGE value="add .gitignore" />
     <MESSAGE value="add test files" />
-    <option name="LAST_COMMIT_MESSAGE" value="add test files" />
+    <MESSAGE value="rename" />
+    <MESSAGE value="add tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="add tests" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
