@@ -7,7 +7,6 @@
     <link href="stylesheets/bootstrap.min.css" rel="stylesheet">
     <link href="stylesheets/upload.css" rel="stylesheet">
 
-
     <title>Upload</title>
 </head>
 <body>
@@ -32,6 +31,7 @@
 
                 <button class="btn btn-default" data-bind="click: progress10">Progress 10%</button>
                 <button class="btn btn-default" data-bind="click: resetProgress">Reset Progress</button>
+                <button class="btn btn-default" data-bind="click: showSamples">Show Samples</button>
 
             </div>
         </div>
@@ -211,7 +211,12 @@
 
                 var u = new Upload(self.selectBoxes()[i]);
                 u.startUploading();
+
             }
+        }
+
+        self.showSamples = function () {
+            window.location = '/samples';
         }
 
     }

@@ -18,7 +18,7 @@ function Upload(elem) {
     var oTimer = 0;
     var sResultFileSize = '';
 
-     secondsToTime = function(secs) { //convert seconds in normal time format
+    self.secondsToTime = function(secs) { //convert seconds in normal time format
         var hr = Math.floor(secs / 3600);
         var min = Math.floor((secs - (hr * 3600)) / 60);
         var sec = Math.floor(secs - (hr * 3600) - (min * 60));
@@ -38,11 +38,98 @@ function Upload(elem) {
         return hr + ':' + min + ':' + sec;
     };
 
-    bytesToSize = function (bytes) {
+    self.bytesToSize = function (bytes) {
         var sizes = ['Bytes', 'KB', 'MB'];
         if (bytes == 0) return 'n/a';
         var i = parseInt(Math.floor(Math.log(bytes) / Math.log(1024)));
         return (bytes / Math.pow(1024, i)).toFixed(1) + ' ' + sizes[i];
+    };
+
+    self.startUploading = function () {
+
+        var uploadElem = self.elem.myForm;
+        if (uploadElem == undefined) {
+            return;
+        }
+
+        // cleanup all temp states
+        iPreviousBytesLoaded = 0;
+
+        // get form data for POSTing
+        var vFD = new FormData(uploadElem);
+
+        // create XMLHttpRequest object, adding few event listeners, and POSTing our data
+        var oXHR = new XMLHttpRequest();
+        oXHR.upload.addEventListener('progress', self.uploadProgress, false);
+        oXHR.addEventListener('load', self.uploadFinish, false);
+        oXHR.addEventListener('error', self.uploadError, false);
+        oXHR.addEventListener('abort', self.uploadAbort, false);
+        oXHR.open('POST', document.URL + 'upload');
+        oXHR.send(vFD);
+
+        // set inner timer
+        oTimer = setInterval(self.doInnerUpdates, 300);
+    };
+
+    self.doInnerUpdates = function () { // display the upload speed
+        var iCB = iBytesUploaded;
+        var iDiff = iCB - iPreviousBytesLoaded;
+
+        // if nothing new loaded - exit
+        if (iDiff == 0)
+            return;
+
+        iPreviousBytesLoaded = iCB;
+        iDiff = iDiff * 2;
+        var iBytesRem = iBytesTotal - iPreviousBytesLoaded;
+        var secondsRemaining = iBytesRem / iDiff;
+
+        // update speed info
+        var iSpeed = iDiff.toString() + 'B/s';
+        if (iDiff > 1024 * 1024) {
+            iSpeed = (Math.round(iDiff * 100 / (1024 * 1024)) / 100).toString() + 'MB/s';
+        } else if (iDiff > 1024) {
+            iSpeed = (Math.round(iDiff * 100 / 1024) / 100).toString() + 'KB/s';
+        }
+
+        self.elem.speed(iSpeed);
+        self.elem.remaining(secondsToTime(secondsRemaining));
+    };
+
+    self.uploadProgress = function (e) { // upload process in progress
+        if (e.lengthComputable) {
+            iBytesUploaded = e.loaded;
+            iBytesTotal = e.total;
+            var iPercentComplete = Math.round(e.loaded * 100 / e.total);
+            var iBytesTransfered = self.bytesToSize(iBytesUploaded);
+
+            self.elem.processed(iPercentComplete); // * 4).toString() + 'px';
+            self.elem.b_transfered = iBytesTransfered;
+            if (iPercentComplete == 100) {
+
+
+            }
+        } else {
+            console.log("unable to compute");
+        }
+    };
+
+    self.uploadFinish = function (e) { // upload successfully finished
+
+        console.log("counter " + self.counter);
+        self.elem.processed(100);
+
+        clearInterval(oTimer);
+    };
+
+    self.uploadError = function (e) { // upload error
+        console.log("upload error");
+        clearInterval(oTimer);
+    };
+
+    self.uploadAbort = function (e) { // upload abort
+        console.log("upload abort");
+        clearInterval(oTimer);
     };
 
     //not used
@@ -90,92 +177,5 @@ function Upload(elem) {
     //    // read selected file as DataURL
     //    oReader.readAsDataURL(oFile);
     //}
-
-    this.startUploading = function () {
-
-        var uploadElem = self.elem.myForm;
-        if (uploadElem == undefined) {
-            return;
-        }
-
-        // cleanup all temp states
-        iPreviousBytesLoaded = 0;
-
-        // get form data for POSTing
-        var vFD = new FormData(uploadElem);
-
-        // create XMLHttpRequest object, adding few event listeners, and POSTing our data
-        var oXHR = new XMLHttpRequest();
-        oXHR.upload.addEventListener('progress', uploadProgress, false);
-        oXHR.addEventListener('load', uploadFinish, false);
-        oXHR.addEventListener('error', uploadError, false);
-        oXHR.addEventListener('abort', uploadAbort, false);
-        oXHR.open('POST', document.URL + 'upload');
-        oXHR.send(vFD);
-
-        // set inner timer
-        oTimer = setInterval(doInnerUpdates, 300);
-    };
-
-    doInnerUpdates = function () { // display the upload speed
-        var iCB = iBytesUploaded;
-        var iDiff = iCB - iPreviousBytesLoaded;
-
-        // if nothing new loaded - exit
-        if (iDiff == 0)
-            return;
-
-        iPreviousBytesLoaded = iCB;
-        iDiff = iDiff * 2;
-        var iBytesRem = iBytesTotal - iPreviousBytesLoaded;
-        var secondsRemaining = iBytesRem / iDiff;
-
-        // update speed info
-        var iSpeed = iDiff.toString() + 'B/s';
-        if (iDiff > 1024 * 1024) {
-            iSpeed = (Math.round(iDiff * 100 / (1024 * 1024)) / 100).toString() + 'MB/s';
-        } else if (iDiff > 1024) {
-            iSpeed = (Math.round(iDiff * 100 / 1024) / 100).toString() + 'KB/s';
-        }
-
-        self.elem.speed(iSpeed);
-        self.elem.remaining(secondsToTime(secondsRemaining));
-    };
-
-    uploadProgress = function (e) { // upload process in progress
-        if (e.lengthComputable) {
-            iBytesUploaded = e.loaded;
-            iBytesTotal = e.total;
-            var iPercentComplete = Math.round(e.loaded * 100 / e.total);
-            var iBytesTransfered = bytesToSize(iBytesUploaded);
-
-            self.elem.processed(iPercentComplete); // * 4).toString() + 'px';
-            self.elem.b_transfered = iBytesTransfered;
-            if (iPercentComplete == 100) {
-
-
-            }
-        } else {
-            console.log("unable to compute");
-        }
-    };
-
-    uploadFinish = function (e) { // upload successfully finished
-
-        console.log("counter " + self.counter);
-        self.elem.processed(100);
-
-        clearInterval(oTimer);
-    };
-
-    uploadError = function (e) { // upload error
-        console.log("upload error");
-        clearInterval(oTimer);
-    };
-
-    uploadAbort = function (e) { // upload abort
-        console.log("upload abort");
-        clearInterval(oTimer);
-    };
 
 }

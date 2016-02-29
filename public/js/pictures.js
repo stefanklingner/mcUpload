@@ -43,6 +43,21 @@ function picture_facade () {
 
     };
 
+    self.getFilenames = function (path, callback) {
+
+        fs.readdir(path, function (err, files) {
+
+            if (err) { throw err; }
+
+            var fileArray = [];
+            files.forEach(function (elem) {
+                fileArray.push(elem);
+            });
+            callback(fileArray);
+
+        });
+    };
+
 };
 
 module.exports = picture_facade;
