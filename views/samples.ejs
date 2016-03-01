@@ -17,7 +17,7 @@
 
     <ul>
         <% for(var i=0; i<pictures.length; i++) {%>
-        <li><%= pictures[i] %>  </li>
+        <li><%= link_to(pictures[i], 'pictures/'+pictures[i]) %></li>
         <% } %>
     </ul>
 

@@ -1,15 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6373c17b-a165-4ed3-b124-f32a3a148be2" name="Default" comment="add test files">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/samples.ejs" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/upload.ejs" />
+    <list default="true" id="6373c17b-a165-4ed3-b124-f32a3a148be2" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/html/upload.html" afterPath="$PROJECT_DIR$/public/html/upload.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/pictures.js" afterPath="$PROJECT_DIR$/public/js/pictures.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/upload.js" afterPath="$PROJECT_DIR$/public/js/upload.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/upload_routings.js" afterPath="$PROJECT_DIR$/routes/upload_routings.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/upload_test.js" afterPath="$PROJECT_DIR$/test/upload_test.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.js" afterPath="$PROJECT_DIR$/app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/samples.ejs" afterPath="$PROJECT_DIR$/views/samples.ejs" />
     </list>
     <ignored path="mcUpload.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -30,24 +25,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
-      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="app.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="118" column="14" selection-start-line="118" selection-start-column="14" selection-end-line="118" selection-end-column="14" />
+            <state vertical-scroll-proportion="0.454343">
+              <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
               <folding>
-                <element signature="e#851#907#0" expanded="false" />
-                <element signature="e#1121#1125#0" expanded="false" />
+                <element signature="e#852#908#0" expanded="false" />
+                <element signature="e#1122#1126#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="upload_test.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="upload_test.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/upload_test.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.46463022">
-              <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -66,8 +61,8 @@
       <file leaf-file-name="samples.ejs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/samples.ejs">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-12.423077">
-              <caret line="19" column="30" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="30" />
+            <state vertical-scroll-proportion="-17.0">
+              <caret line="26" column="7" selection-start-line="26" selection-start-column="7" selection-end-line="26" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -125,7 +120,6 @@
         <option value="$PROJECT_DIR$/bin/www.js" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/bin/www" />
-        <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/views/error.html" />
         <option value="$PROJECT_DIR$/views/error.ejs" />
         <option value="$PROJECT_DIR$/public/html/drag_and_drop.html" />
@@ -138,6 +132,7 @@
         <option value="$PROJECT_DIR$/test/upload_test.js" />
         <option value="$PROJECT_DIR$/routes/upload_routings.js" />
         <option value="$PROJECT_DIR$/views/samples.ejs" />
+        <option value="$PROJECT_DIR$/app.js" />
       </list>
     </option>
   </component>
@@ -156,10 +151,10 @@
     <data>C:\Users\stefank\AppData\Roaming\npm\node_modules\mocha</data>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1056" />
+    <option name="x" value="246" />
+    <option name="y" value="68" />
+    <option name="width" value="1513" />
+    <option name="height" value="883" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -569,7 +564,13 @@
       <option name="project" value="LOCAL" />
       <updated>1456416218635</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="read sample pictures from dir">
+      <created>1456761592653</created>
+      <option name="number" value="00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1456761592653</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -614,12 +615,13 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="246" y="68" width="1513" height="883" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19810326" sideWeight="0.49434572" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25491527" sideWeight="0.49434572" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.49789253" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29577464" sideWeight="0.45047417" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.49578503" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.364" sideWeight="0.45152542" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3336945" sideWeight="0.4915701" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19810326" sideWeight="0.5056543" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29112554" sideWeight="0.48524764" order="7" side_tool="false" content_ui="tabs" />
@@ -627,10 +629,9 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.49578503" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29577464" sideWeight="0.5495258" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.364" sideWeight="0.54847455" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.49578503" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -657,7 +658,8 @@
     <MESSAGE value="add test files" />
     <MESSAGE value="rename" />
     <MESSAGE value="add tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="add tests" />
+    <MESSAGE value="read sample pictures from dir" />
+    <option name="LAST_COMMIT_MESSAGE" value="read sample pictures from dir" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -690,8 +692,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="59" column="64" selection-start-line="59" selection-start-column="64" selection-end-line="59" selection-end-column="64" />
           <folding>
-            <element signature="e#851#907#0" expanded="false" />
-            <element signature="e#1121#1125#0" expanded="false" />
+            <element signature="e#852#908#0" expanded="false" />
+            <element signature="e#1122#1126#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -746,8 +748,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#851#907#0" expanded="false" />
-            <element signature="e#1121#1125#0" expanded="false" />
+            <element signature="e#852#908#0" expanded="false" />
+            <element signature="e#1122#1126#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -781,8 +783,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#851#907#0" expanded="false" />
-            <element signature="e#1121#1125#0" expanded="false" />
+            <element signature="e#852#908#0" expanded="false" />
+            <element signature="e#1122#1126#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -816,8 +818,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#851#907#0" expanded="false" />
-            <element signature="e#1121#1125#0" expanded="false" />
+            <element signature="e#852#908#0" expanded="false" />
+            <element signature="e#1122#1126#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -834,8 +836,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="10" column="18" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
           <folding>
-            <element signature="e#851#907#0" expanded="false" />
-            <element signature="e#1121#1125#0" expanded="false" />
+            <element signature="e#852#908#0" expanded="false" />
+            <element signature="e#1122#1126#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1052,17 +1054,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="118" column="14" selection-start-line="118" selection-start-column="14" selection-end-line="118" selection-end-column="14" />
-          <folding>
-            <element signature="e#851#907#0" expanded="false" />
-            <element signature="e#1121#1125#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/routes/upload_routings.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1079,19 +1070,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/samples.ejs">
+    <entry file="file://$PROJECT_DIR$/test/upload_test.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.423077">
-          <caret line="19" column="30" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="30" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/upload_test.js">
+    <entry file="file://$PROJECT_DIR$/views/samples.ejs">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.46463022">
-          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+        <state vertical-scroll-proportion="-17.0">
+          <caret line="26" column="7" selection-start-line="26" selection-start-column="7" selection-end-line="26" selection-end-column="7" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.454343">
+          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding>
+            <element signature="e#852#908#0" expanded="false" />
+            <element signature="e#1122#1126#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
