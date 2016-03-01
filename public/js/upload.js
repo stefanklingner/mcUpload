@@ -147,7 +147,7 @@ function Upload(elem) {
             iBytesUploaded = e.loaded;
             iBytesTotal = e.total;
             var iPercentComplete = Math.round(e.loaded * 100 / e.total);
-            var iBytesTransfered = bytesToSize(iBytesUploaded);
+            var iBytesTransfered = self.bytesToSize(iBytesUploaded);
 
             self.elem.processed(iPercentComplete); // * 4).toString() + 'px';
             self.elem.b_transfered = iBytesTransfered;
