@@ -58,8 +58,30 @@ describe('picture_facade', function() {
             done();
 
         });
-
     });
+
+    describe("#check if all are uploaded", function() {
+
+        it('uploadedAll should be true', function() {
+
+            //Arrange
+            var a = [true, true, true];
+
+            //Act
+
+            //Assert
+
+            var uploadedAll = false;
+
+            uploadedAll = a.every(function(element) {
+                return element === true;
+            });
+
+            assert.isTrue(uploadedAll);
+
+        });
+    });
+
 });
 
 

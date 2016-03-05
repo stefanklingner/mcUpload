@@ -4,11 +4,13 @@
 
 "use strict";
 
-function Upload(elem) {
+function Upload(elem, hashId) {
 
     var self = this;
     self.elem = elem;
     self.counter = 100;
+    var elementFullyUploaded = false;
+
 
     // common variables
     var iBytesUploaded = 0;
@@ -117,6 +119,10 @@ function Upload(elem) {
         oTimer = setInterval(doInnerUpdates, 300);
     };
 
+    this.isElementFullyUploaded = function() {
+        return elementFullyUploaded;
+    };
+
     doInnerUpdates = function () { // display the upload speed
         var iCB = iBytesUploaded;
         var iDiff = iCB - iPreviousBytesLoaded;
@@ -166,6 +172,8 @@ function Upload(elem) {
         self.elem.processed(100);
 
         clearInterval(oTimer);
+        elementFullyUploaded = true;;
+
     };
 
     uploadError = function (e) { // upload error

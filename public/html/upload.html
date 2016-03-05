@@ -207,10 +207,14 @@
 
         self.upload = function () {
 
+            var uploadElements = new Array();
+
             for (var i = 0; i < self.selectBoxes().length; i++) {
 
                 var u = new Upload(self.selectBoxes()[i]);
                 u.startUploading();
+
+                uploadElements.Add(u);
 
             }
         }
