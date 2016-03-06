@@ -80,6 +80,21 @@ describe('picture_facade', function() {
             assert.isTrue(uploadedAll);
 
         });
+
+        it('should load five filenames', function (done) {
+            var pf = new picture_facade();
+
+            var count = 0;
+            pf.getFilenames("./test/test_files/", function(nameArray) {
+
+                assert.IsTrue(nameArray.length === 5);
+                assert.IsFalse(nameArray.length != 5);
+
+            });
+
+            done();
+
+        });
     });
 
 });
