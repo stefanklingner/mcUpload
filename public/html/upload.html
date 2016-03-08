@@ -114,7 +114,7 @@
             self.file = event.currentTarget.files[0];
             self.fileSize = event.currentTarget.files[0].size;
             self.myForm = event.target.form;
-        }
+        };
 
         self.filename = ko.observable();
         self.speed = ko.observable();
@@ -140,7 +140,7 @@
 
         self.openFileDlg = function () {
             document.getElementById('fileInput').click();
-        }
+        };
 
         self.fileSelected = function () {
 
@@ -154,14 +154,14 @@
         self.addASelectBox = function () {
             boxIndex++;
             self.selectBoxes.push(new selectBox(boxIndex));
-        }
+        };
 
         self.reset = function () {
             tmpProgress = 0;
             self.selectBoxes.removeAll();
             boxIndex = 0;
             self.selectBoxes.push(new selectBox(boxIndex));
-        }
+        };
 
         self.upload = function () {
             for (var i = 0; i < self.selectBoxes().length; i++) {
@@ -172,7 +172,7 @@
                 console.log(self.selectBoxes()[i].index);
 
             }
-        }
+        };
 
         self.remove = function (item) {
             self.selectBoxes.remove(self.selectBoxes()[item]);
@@ -195,7 +195,7 @@
 
                 self.selectBoxes()[i].processed(tmpProgress);
             }
-        }
+        };
 
         self.resetProgress = function () {
             tmpProgress = 0;
@@ -203,11 +203,11 @@
 
                 self.selectBoxes()[i].processed(0);
             }
-        }
+        };
 
         self.upload = function () {
 
-            var uploadElements = new Array();
+            var uploadElements = [];
 
             for (var i = 0; i < self.selectBoxes().length; i++) {
 

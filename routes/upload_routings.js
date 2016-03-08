@@ -3,6 +3,7 @@ var router = express.Router();
 var Busboy = require('busboy');
 
 var path = require('path');
+var util = require('util');
 
 var picture_facade = require('../public/js/pictures');
 
@@ -18,8 +19,7 @@ function sendUploadScreen(req, res) {
     //res.sendFile('./../public/html/upload.html');
     //res.sendFile(path.join(__dirname, '../public/html', 'upload.html'));
     res.render('upload');
-};
-
+}
 router.get(home + 'samples', function (req, res) {
 
     var pf = new picture_facade();

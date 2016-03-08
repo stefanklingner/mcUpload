@@ -172,8 +172,7 @@ function Upload(elem, hashId) {
         self.elem.processed(100);
 
         clearInterval(oTimer);
-        elementFullyUploaded = true;;
-
+        elementFullyUploaded = true;
     };
 
     uploadError = function (e) { // upload error

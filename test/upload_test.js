@@ -82,6 +82,7 @@ describe('picture_facade', function() {
         });
 
         it('should load five filenames', function (done) {
+
             var pf = new picture_facade();
 
             var count = 0;
