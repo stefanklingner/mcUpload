@@ -43,7 +43,7 @@ describe('picture_facade', function() {
             var pf = new picture_facade();
 
             var count = 0;
-            pf.load("./test/test_files/", function(err, data) {
+            pf.load("../public/test_files/", function(err, data) {
 
                 if (err) throw err;
 
@@ -86,7 +86,7 @@ describe('picture_facade', function() {
             var pf = new picture_facade();
 
             var count = 0;
-            pf.getFilenames("./test/test_files/", function(nameArray) {
+            pf.getFilenames("../public/test_files/", function(nameArray) {
 
                 assert.IsTrue(nameArray.length === 5);
                 assert.IsFalse(nameArray.length != 5);
@@ -99,8 +99,3 @@ describe('picture_facade', function() {
     });
 
 });
-
-
-
-
-

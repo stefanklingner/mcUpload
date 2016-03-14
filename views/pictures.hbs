@@ -7,18 +7,19 @@
     <link href="stylesheets/bootstrap.min.css" rel="stylesheet">
     <link href="stylesheets/upload.css" rel="stylesheet">
 
-    <title>PictureSamples</title>
+    <title>You uploaded</title>
+
 </head>
 <body>
 
-<h1> <%= title %> </h1>
+<h1> {{title}}  </h1>
 
 <div class="row">
 
     <ul>
-        <% for(var i=0; i<pictures.length; i++) {%>
-        <li><%= pictures[i] %>  </li>
-        <% } %>
+        {{#each pictures}}
+            <li>{{this}}</li>
+        {{/each}}
     </ul>
 
 </div>

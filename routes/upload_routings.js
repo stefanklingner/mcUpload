@@ -15,17 +15,15 @@ router.get(home, sendUploadScreen);
 router.get(home + 'a*d', sendUploadScreen);
 
 function sendUploadScreen(req, res) {
-    //res.sendFile(__dirname + html_dir + 'upload.html');
-    //res.sendFile('./../public/html/upload.html');
-    //res.sendFile(path.join(__dirname, '../public/html', 'upload.html'));
     res.render('upload');
 }
+
 router.get(home + 'samples', function (req, res) {
 
     var pf = new picture_facade();
 
     var count = 0;
-    pf.getFilenames("./test/test_files/", function(nameArray) {
+    pf.getFilenames(__dirname + "/../public/test_files/", function(nameArray) {
 
         if (nameArray === undefined) {
             throw "nameArray undefined";
@@ -36,6 +34,8 @@ router.get(home + 'samples', function (req, res) {
     });
 
 });
+
+
 
 //
 router.get(home + 'simple', function (req, res) {
