@@ -58,6 +58,5 @@ function picture_facade () {
         });
     };
 
-};
-
+}
 module.exports = picture_facade;

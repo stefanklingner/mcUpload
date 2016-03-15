@@ -52,13 +52,37 @@ describe('picture_facade', function() {
                     assert.isTrue(data.length > 0);
                     assert.isTrue(count > 0, "count <= 0" );
                 }
+
             });
 
             done();
 
         });
+    });
+
+    describe("#check if all are uploaded", function() {
+
+        it('uploadedAll should be true', function() {
+
+            //Arrange
+            var a = [true, true, true];
+
+            //Act
+
+            //Assert
+
+            var uploadedAll = false;
+
+            uploadedAll = a.every(function(element) {
+                return element === true;
+            });
+
+            assert.isTrue(uploadedAll);
+
+        });
 
         it('should load five filenames', function (done) {
+
             var pf = new picture_facade();
 
             var count = 0;
@@ -73,7 +97,6 @@ describe('picture_facade', function() {
 
         });
     });
-
 
 });
 
