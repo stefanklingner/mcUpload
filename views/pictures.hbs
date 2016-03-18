@@ -7,7 +7,7 @@
     <link href="stylesheets/bootstrap.min.css" rel="stylesheet">
     <link href="stylesheets/upload.css" rel="stylesheet">
 
-    <title>You uploaded</title>
+    <title>You just uploaded these files...</title>
 
 </head>
 <body>
@@ -16,11 +16,15 @@
 
 <div class="row">
 
-    <ul>
-        {{#each pictures}}
-            <li>{{this}}</li>
-        {{/each}}
-    </ul>
+    {{#each pictures}}
+        <div class="col-xs-6 col-md-3">
+
+            <a href="#" class="thumbnail">
+                <img src="/test_files/{{this}}" alt={{this}}>
+            </a>
+
+        </div>
+    {{/each}}
 
 </div>
 
