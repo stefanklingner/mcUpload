@@ -119,6 +119,13 @@ function Upload(elem, hashId) {
         oTimer = setInterval(self.doInnerUpdates, 300);
     };
 
+<<<<<<< HEAD
+=======
+    self.isElementFullyUploaded = function() {
+        return elementFullyUploaded;
+    };
+
+>>>>>>> handlebars
     self.doInnerUpdates = function () { // display the upload speed
         var iCB = iBytesUploaded;
         var iDiff = iCB - iPreviousBytesLoaded;

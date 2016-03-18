@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <!-- Bootstrap -->
+    <link href="stylesheets/bootstrap.min.css" rel="stylesheet">
+    <link href="stylesheets/upload.css" rel="stylesheet">
+
+    <title>You just uploaded these files...</title>
+
+</head>
+<body>
+
+<h1> {{title}}  </h1>
+
+<div class="row">
+
+    {{#each pictures}}
+        <div class="col-xs-6 col-md-3">
+
+            <a href="#" class="thumbnail">
+                <img src="/test_files/{{this}}" alt={{this}}>
+            </a>
+
+        </div>
+    {{/each}}
+
+</div>
+
+</body>
+</html>
