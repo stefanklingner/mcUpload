@@ -11,7 +11,7 @@ var fs = require('fs');
 var picture_facade = require('../public/js/pictures');
 
 var home = '/';
-var _dest = __dirname + "/../public/upload_destination";
+var _dest = __dirname + "/../upload_destination/";
 
 //
 router.get(home, sendUploadScreen);
@@ -98,7 +98,7 @@ function uploadFile (req, res) {
         busboy.on('file', function (fieldname, file, filename, encoding, mimetype) {
 
             //var saveTo = path.join(os.tmpDir(), path.basename(fieldname));
-            var saveTo = _dest;
+            var saveTo = _dest + filename;
             file.pipe(fs.createWriteStream(saveTo));
 
             console.log('File [' + fieldname + ']: filename: ' + filename);
