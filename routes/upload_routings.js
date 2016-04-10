@@ -46,8 +46,6 @@ router.get(home + 'pictures', function (req, res) {
 
     var count = 0;
 
-
-
     pf.getFilenames(_dest, function(nameArray) {
 
         if (nameArray === undefined) {
